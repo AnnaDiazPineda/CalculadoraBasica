@@ -4,88 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context="dsa.eetac.upc.edu.calculadorabasica.MainActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Introduïu 2 valors enters i una operació. Prémer “=” per obtenir el resultat.
+                            Prémer “C” per esborrar.”"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="314dp"
+        android:layout_height="421dp"
         android:orientation="vertical"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="76dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="66dp"
             android:orientation="horizontal">
 
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Num1" />
+                android:fontFamily="monospace"
+                android:text="Num1"
+                android:textAlignment="textEnd"
+                android:textColor="?attr/colorError"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/num1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteY="425dp">
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Num1" />
+                android:fontFamily="monospace"
+                android:text="Num2"
+                android:textAlignment="textEnd"
+                android:textColor="?attr/colorError"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end" />
 
             <EditText
-                android:id="@+id/editText7"
-                android:layout_width="wrap_content"
+                android:id="@+id/num2"
+                android:layout_width="319dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="76dp"
+                android:id="@+id/bmultiplicar"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sumar" />
+                android:fontFamily="monospace"
+                android:text="X"
+                android:textSize="13sp" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:id="@+id/bsumar"
+                android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Restar" />
+                android:fontFamily="monospace"
+                android:text="+" />
 
             <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                android:id="@+id/brestar"
+                android:layout_width="9dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Dividir" />
+                android:fontFamily="monospace"
+                android:text="-" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:id="@+id/bdividir"
+                android:layout_width="4dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Multiplicar" />
+                android:fontFamily="monospace"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/besborrar"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="C"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="261dp"
+                tools:layout_editor_absoluteY="189dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,14 +149,42 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="74dp"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="Resultat:" />
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="8sp"
+            android:text="Resultat"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
 
         <TextView
-            android:layout_width="169dp"
+            android:id="@+id/bresultat"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="TextView" />
+            android:fontFamily="monospace"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/Historial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial"
+            android:textAlignment="center"
+            android:textColor="?attr/colorError"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/bhistorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@android:drawable/ic_menu_rotate" />
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
