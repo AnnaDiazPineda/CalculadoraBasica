@@ -17,7 +17,7 @@ import java.util.List;
 public class Historial extends AppCompatActivity implements View.OnClickListener {
 
     public ListView historial; //operationListView
-    Button esborrar, tancar;
+    Button tancar;
     public ArrayAdapter <String> adapter;
 
     @Override
@@ -51,11 +51,7 @@ public class Historial extends AppCompatActivity implements View.OnClickListener
             case R.id.btancar:
                 finish();
                 break;
-            /*case R.id.besborrar:
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                finish();
-                break;*/
+
         }
 
     }
