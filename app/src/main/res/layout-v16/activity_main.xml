@@ -29,9 +29,9 @@
                 android:layout_weight="1"
                 android:fontFamily="monospace"
                 android:gravity="end"
-                android:text="Num1"
+                android:text="@string/num1"
                 android:textAlignment="textEnd"
-                android:textColor="@color/colorAccent"
+                android:textColor="?android:attr/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:gravity="end"
                 android:text="Num2"
                 android:textAlignment="textEnd"
-                android:textColor="?attr/colorError"
+                android:textColor="?android:attr/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -156,7 +156,7 @@
             android:id="@+id/bverHistorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Historial d'operacions" />
+            android:text="Veure Historial d'operacions" />
 
     </LinearLayout>
 

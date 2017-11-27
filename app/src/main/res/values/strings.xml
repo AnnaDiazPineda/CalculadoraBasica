@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CalculadoraBasica</string>
+    <string name="num1">Num1</string>
+    <string name="num2">Num2</string>
+    <string name="veure_historial_d_operacions">Veure Historial d\'operacions</string>
+    
+    <string name="x">X</string>
 </resources>

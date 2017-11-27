@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dsa.eetac.upc.edu.calculadorabasica.Historial">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="479dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="18dp">
+
+        <TextView
+            android:id="@+id/historial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial d'Operacions"
+            android:textAlignment="center"
+            android:textColor="?attr/colorError"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/bhistorial"
+            android:layout_width="match_parent"
+            android:layout_height="347dp"
+            android:entries="@android:drawable/ic_menu_rotate" />
+
+        <Button
+            android:id="@+id/bborrarhistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esborrar Historial" />
+
+        <Button
+            android:id="@+id/btancar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tancar" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
