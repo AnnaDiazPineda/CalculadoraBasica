@@ -1,5 +1,6 @@
 package dsa.eetac.upc.edu.calculadorabasica;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,6 @@ public class Historial extends AppCompatActivity implements View.OnClickListener
 
     public ListView historial; //operationListView
     Button esborrar, tancar;
-    //ArrayList<String> historialOperacions = (ArrayList<String>) getIntent().getStringArrayListExtra("HISTORIAL");  //operationList
     public ArrayAdapter <String> adapter;
 
     @Override
@@ -26,31 +27,14 @@ public class Historial extends AppCompatActivity implements View.OnClickListener
         final ArrayList<String> historialOperacions = (ArrayList<String>) getIntent().getStringArrayListExtra("HISTORIAL");  //operationList
         historial = (ListView) findViewById(R.id.bhistorial);
 
-        esborrar = (Button) findViewById(R.id.besborrar);
-        esborrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    for (int i=0; i<historialOperacions.size(); i++)
-                    {
-                        historialOperacions.remove(i);
-                    }
+        //esborrar = (Button) findViewById(R.id.besborrar);
+        //esborrar.setOnClickListener(this) ;
 
-                    adapter.notifyDataSetChanged();
 
-            }
-        });
         tancar = (Button) findViewById(R.id.btancar);
-        tancar.setOnClickListener(new View.OnClickListener(){
+        tancar.setOnClickListener(this);
 
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
 
-        //declaració de events
-        //esborrar.setOnClickListener(this);
-        //tancar.setOnClickListener(this);
 
             //adaptador s'ho passa a la llista per ser mostrats.
             adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, historialOperacions);
@@ -62,6 +46,17 @@ public class Historial extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
+        switch(view.getId())
+        {
+            case R.id.btancar:
+                finish();
+                break;
+            /*case R.id.besborrar:
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                finish();
+                break;*/
+        }
 
     }
 }
